@@ -1,12 +1,10 @@
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #F1FFF8;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,56 +13,52 @@
   -webkit-text-size-adjust: 100%;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Main grid settings */
+#root {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: auto 1fr;
+
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.App {
+  padding: 0 100px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-areas: 'Menu Today';
+  grid-template-columns: 254px auto;
+  grid-gap: 138px; /* Left hand side gap relative to TimeSelector component*/
+  width: 100%;
+  height: available;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.Menu {
+  grid-area: Menu;
+  display: block;
+  margin-top: 80px;
 }
+
+.Today {
+  grid-area: Today;
+  display: grid;
+  grid-template-areas: 'TimeSelector TaskList';
+  grid-template-columns: 400px auto;
+  grid-gap: 138px; /* Right hand side gap relative to TimeSelector component*/
+  background-color: aqua;
+}
+
+.TimeSelector {
+  grid-area: TimeSelector;
+  background-color: blueviolet;
+}
+
+.TaskList {
+  grid-area: TaskList;
+  background-color: blue;
+}
+
+

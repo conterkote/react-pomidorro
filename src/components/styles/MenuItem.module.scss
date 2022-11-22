@@ -1,0 +1,63 @@
+.MenuItem {
+  display: flex;
+  align-items: center;
+  margin: 16px 0;
+  cursor: pointer;
+
+  &Wrapper {
+    width: 64px;
+    height: 64px;
+    background-color: #EE4C4C;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 14px;
+    .logo {
+      margin: 0 16px;
+    }
+  }
+  &CurrentWrapper {
+    height: 64px;
+    background-color: #EE4C4C;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 14px;
+    padding-right: 20px;
+    .logo {
+      margin: 0 16px;
+    }
+  }
+
+  &Name {
+    z-index: 1;
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+    opacity: 0;
+    width: fit-content;
+    white-space: nowrap;
+    user-select: none;
+  }
+  &CurrentName {
+    z-index: 1;
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+    opacity: 100%;
+    width: fit-content;
+    white-space: nowrap;
+    user-select: none;
+  }
+
+  .visible {
+    opacity: 100%;
+  }
+
+  .invisible {
+    opacity: 0;
+  }
+  .hidden {
+    display: none;
+  }
+}
