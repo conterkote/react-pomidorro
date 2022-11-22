@@ -1,8 +1,6 @@
 import React, {
-  DetailedHTMLProps,
-  DetailedReactHTMLElement, HTMLAttributes,
-  MouseEventHandler,
-  SyntheticEvent,
+  CSSProperties,
+  DetailedHTMLProps, HTMLAttributes,
   useEffect,
   useRef, useState
 } from 'react';
@@ -15,7 +13,7 @@ export enum menuItemLogo {
   Calendar = "/src/assets/images/menuItems/Calendar.svg"
 }
 
-export interface MenuItemProps {
+interface MenuItemProps {
   logo: menuItemLogo,
   itemName: string,
   currentPage: string,
@@ -23,11 +21,28 @@ export interface MenuItemProps {
 }
 
 function MenuItem({logo, itemName, currentPage, onClick}: MenuItemProps) {
+  const itemNameRef = useRef<HTMLSpanElement | null>(null);
+  const wrapperRef = useRef<HTMLDivElement | null>(null);
+  const rootRef = useRef<HTMLDivElement | null>(null);
+  const [width, setWidth] = useState(0);
+  const [setTransition, setSetTransition] = useState(0);
+  useEffect(() => {
+    if (itemNameRef.current) {
+      const spanRef = itemNameRef.current;
+      if (spanRef) {
+        setWidth(spanRef.offsetWidth + 84);
+      }
+    }
+  }, [itemNameRef]);
+  const style = {'--width': `${width}px`} as CSSProperties
   return (
-    <div className={classes.MenuItem}>
-      <div className={classes.MenuItemCurrentWrapper}>
+    <div ref={rootRef} style={style} className={classes.MenuItem}>
+      <div
+        ref={wrapperRef}
+        className={currentPage !== itemName ? `${classes.MenuItemWrapper}` : `${classes.MenuItemCurrentWrapper}`}
+        onClick={onClick}>
         <img className={classes.logo} src={`${logo}`} alt=""/>
-        <span className={`${classes.MenuItemCurrentName}`}
+        <span ref={itemNameRef} className={currentPage !== itemName ? `${classes.MenuItemName}` : `${classes.MenuItemCurrentName}`}
         >{itemName}</span>
       </div>
     </div>

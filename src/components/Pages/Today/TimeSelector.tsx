@@ -4,7 +4,7 @@ import TimeCard from "./components/TimeCard";
 function TimeSelector() {
   return (
     <div className="TimeSelector">
-      <TimeCard time={'Morning'}/>
+      <TimeCard />
     </div>
   );
 }

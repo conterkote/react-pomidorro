@@ -16,6 +16,7 @@ function App() {
   const onClick = (e: React.SyntheticEvent): void => {
     setCurrentPage((e.currentTarget.lastChild as HTMLSpanElement).innerText)
   }
+  console.log(currentPage);
   return (
     <>
       <Header username={'restinl'}/>

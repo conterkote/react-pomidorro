@@ -1,8 +1,10 @@
 .MenuItem {
+  --width: 0;
   display: flex;
   align-items: center;
   margin: 16px 0;
   cursor: pointer;
+  position: relative;
 }
 .MenuItemWrapper {
   width: 64px;
@@ -12,37 +14,46 @@
   display: flex;
   align-items: center;
   border-radius: 14px;
+  transition: 0.1s ease-in;
+}
+.MenuItemWrapper:hover {
+  width: var(--width);
+}
+.MenuItemWrapper:hover .MenuItemName {
+  opacity: 100%;
 }
 .MenuItemWrapper .logo {
   margin: 0 16px;
 }
 .MenuItemCurrentWrapper {
+  width: var(--width);
   height: 64px;
-  background-color: #EE4C4C;
   position: relative;
   display: flex;
   align-items: center;
+  background-color: #61B51F;
   border-radius: 14px;
-  padding-right: 20px;
 }
 .MenuItemCurrentWrapper .logo {
   margin: 0 16px;
 }
 .MenuItemName {
   z-index: 1;
+  left: 64px;
+  opacity: 0;
   color: white;
   font-size: 24px;
   font-weight: 400;
-  opacity: 0;
   width: fit-content;
   white-space: nowrap;
   user-select: none;
+  position: absolute;
 }
 .MenuItemCurrentName {
   z-index: 1;
   color: white;
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 500;
   opacity: 100%;
   width: fit-content;
   white-space: nowrap;
