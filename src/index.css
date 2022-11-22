@@ -36,6 +36,22 @@ body {
   height: available;
 }
 
+@media (max-width: 1600px) {
+  .App {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .App {
+    padding: 0 32px
+  }
+}
+@media (max-width: 1024px) {
+  .App {
+    padding: 0 16px;
+  }
+}
 .Menu {
   grid-area: Menu;
   display: block;
@@ -46,8 +62,8 @@ body {
   grid-area: Today;
   display: grid;
   grid-template-areas: 'TimeSelector TaskList';
-  grid-template-columns: 400px auto;
-  grid-gap: 138px; /* Right hand side gap relative to TimeSelector component*/
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 32px; /* Right hand side gap relative to TimeSelector component*/
   background-color: aqua;
 }
 

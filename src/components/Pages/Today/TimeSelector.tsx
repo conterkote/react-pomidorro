@@ -1,10 +1,15 @@
 import React from 'react';
-import TimeCard from "./components/TimeCard";
+import TimeCard, {TimeSelectorProps} from "./components/TimeCard";
+
+
 
 function TimeSelector() {
   return (
     <div className="TimeSelector">
-      <TimeCard time={'Morning'}/>
+        <TimeCard time={'morning'}/>
+        <TimeCard time={'midday'}/>
+        <TimeCard time={'afternoon'}/>
+        <TimeCard time={'evening'}/>
     </div>
   );
 }
