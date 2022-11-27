@@ -5,7 +5,7 @@ export interface TimeSelectorProps {
   time: 'morning' | 'midday' | 'afternoon' | 'evening'
 }
 
-function TimeCard({time}:TimeSelectorProps) {
+function TimeCard({ time } : TimeSelectorProps) {
   return (
     <div className={classes.Card}>
 
