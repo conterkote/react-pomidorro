@@ -17,6 +17,10 @@ body {
   margin: 0;
 }
 
+button {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
 /* Main grid settings */
 #root {
   display: grid;
@@ -52,6 +56,21 @@ body {
     padding: 0 16px;
   }
 }
+
+.pageHeader {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1B1B1B;
+  margin: 22px 0;
+}
+
+.sectionHeader {
+  font-size: 24px;
+  font-weight: 500;
+  color: #1B1B1B;
+  margin: 0;
+}
+
 .Menu {
   grid-area: Menu;
   display: block;
@@ -64,7 +83,6 @@ body {
   grid-template-areas: 'TimeSelector TaskList';
   grid-template-columns: 1fr 2fr;
   grid-gap: 32px; /* Right hand side gap relative to TimeSelector component*/
-  background-color: aqua;
 }
 
 .TimeSelector {
@@ -74,7 +92,6 @@ body {
 
 .TaskList {
   grid-area: TaskList;
-  background-color: blue;
 }
 
 

@@ -1,0 +1,20 @@
+.stateControlWrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 22px;
+  margin-bottom: 22px;
+  justify-content: space-between;
+}
+
+.switchDisplayStateButton {
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 14px;
+  background-color: #94F5C5;
+  width: 250px;
+  height: 33px;
+  border: 0;
+  outline: none;
+}
+
+/*# sourceMappingURL=CompletedTasks.module.css.map */

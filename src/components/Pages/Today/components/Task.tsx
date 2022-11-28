@@ -1,9 +1,10 @@
 import React from 'react';
+import {ITask} from "../../../../models";
 
-function Task() {
+function Task({ taskName, isCompleted, timeCategory, timeOfCreation } : ITask) {
   return (
     <div>
-
+      {taskName}
     </div>
   );
 }
