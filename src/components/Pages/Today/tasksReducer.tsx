@@ -1,6 +1,6 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {IInitialState, ITask} from "../../../models";
-import {RootState} from "../../../store/store";
+import { RootState } from "../../../store/store";
 import {v4} from 'uuid'
 
 
