@@ -11,6 +11,16 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --morning-main: #FBF4B8;
+  --morning-text: #888943;
+  --midday-main: #D8FB8F;
+  --midday-text: #648423;
+  --afternoon-main: #5AA065;
+  --afternoon-text: #00460B;
+  --evening-main: #97AABF;
+  --evening-text: #2D377E;
+  --default-radius: 14px;
 }
 
 body {
@@ -64,12 +74,10 @@ body {
   grid-template-areas: 'TimeSelector TaskList';
   grid-template-columns: 1fr 2fr;
   grid-gap: 32px; /* Right hand side gap relative to TimeSelector component*/
-  background-color: aqua;
 }
 
 .TimeSelector {
   grid-area: TimeSelector;
-  background-color: blueviolet;
 }
 
 .TaskList {
@@ -77,4 +85,6 @@ body {
   background-color: blue;
 }
 
-
+.default-radius {
+  border-radius: var(--default-radius);
+}

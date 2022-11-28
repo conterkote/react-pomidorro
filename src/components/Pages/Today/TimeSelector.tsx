@@ -1,15 +1,21 @@
 import React from 'react';
-import TimeCard, {TimeSelectorProps} from "./components/TimeCard";
-
+import TimeCard, {TTimes} from "./components/TimeCard";
+import classes from './styles/TimeSelector.module.css'
 
 
 function TimeSelector() {
+  const cardsTime: TTimes[] = ["morning", "midday", "afternoon", "evening"]
+  const addTask = (time: TTimes) => {
+    console.log(time)
+  }
+  const getReward = () => {
+
+  }
+
   return (
     <div className="TimeSelector">
-        <TimeCard time={'morning'}/>
-        <TimeCard time={'midday'}/>
-        <TimeCard time={'afternoon'}/>
-        <TimeCard time={'evening'}/>
+      {cardsTime.map(cardTime => <TimeCard time={cardTime} addTask={addTask}/>)}
+      <button onClick={getReward} className={classes.rewardButton}>Get reward</button>
     </div>
   );
 }

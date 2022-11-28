@@ -1,3 +1,40 @@
+.Card {
+  background-color: var(--back-color);
+  color: var(--text-color);
+  padding: 16px 32px;
+}
 
+.daytimeHead {
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.morning {
+  --back-color: var(--morning-main);
+  --text-color: var(--morning-text);
+}
+
+.midday {
+  --back-color: var(--midday-main);
+  --text-color: var(--midday-text);
+}
+
+.afternoon {
+  --back-color: var(--afternoon-main);
+  --text-color: var(--afternoon-text);
+}
+
+.evening {
+  --back-color: var(--evening-main);
+  --text-color: var(--evening-text);
+}
+
+.plusIcon {
+  cursor: pointer;
+}
 
 /*# sourceMappingURL=TimeCard.module.css.map */
