@@ -4,10 +4,11 @@ import classes from './styles/TimeCard.module.css'
 export type TTimes = 'morning' | 'midday' | 'afternoon' | 'evening'
 export interface TimeSelectorProps {
   time: TTimes,
-  addTask: (time: TTimes) => void
+  addTask: (time: TTimes) => void,
+  tasks?: string[]
 }
 
-function TimeCard({ time, addTask } : TimeSelectorProps) {
+function TimeCard({ time, addTask, tasks = [] } : TimeSelectorProps) {
   return (
     <div className={`${classes.Card} ${classes[time]} default-radius`}>
       <div className={classes.daytimeHead}>

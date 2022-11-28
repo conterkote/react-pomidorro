@@ -12,3 +12,9 @@
   border: none;
   cursor: pointer;
 }
+.timeSelectorContainer {
+  padding-top: 80px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}

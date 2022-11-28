@@ -13,7 +13,7 @@ function TimeSelector() {
   }
 
   return (
-    <div className="TimeSelector">
+    <div className={`TimeSelector ${classes.timeSelectorContainer}`}>
       {cardsTime.map(cardTime => <TimeCard time={cardTime} addTask={addTask}/>)}
       <button onClick={getReward} className={classes.rewardButton}>Get reward</button>
     </div>
