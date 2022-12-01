@@ -2,7 +2,7 @@ import React, {CSSProperties, useState} from 'react';
 import SectionHeader from "../../../SectionHeader";
 import classes from './styles/CompletedTasks.module.css'
 import TaskList, {taskListDisplayState} from "../TaskList";
-import {IStatedTasks} from "../../../../models";
+import {IStatedTasks} from "../../../../types/Tasks";
 
 
 function CompletedTasks({ tasks } : IStatedTasks) {

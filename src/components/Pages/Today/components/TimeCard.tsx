@@ -1,7 +1,6 @@
-import React from 'react';
 import classes from './styles/TimeCard.module.css'
+import {TTimes} from "../../../../types/utilTypes";
 
-export type TTimes = 'morning' | 'midday' | 'afternoon' | 'evening'
 export interface TimeSelectorProps {
   time: TTimes,
   addTask: (time: TTimes) => void,

@@ -1,6 +1,6 @@
 import React from 'react';
 import Task from "./components/Task";
-import {ITask} from "../../../models";
+import {ITask} from "../../../types/Tasks";
 import classes from './styles/TaskList.module.css';
 
 export type taskListDisplayState = 'block' | 'none'

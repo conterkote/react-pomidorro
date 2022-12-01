@@ -1,5 +1,5 @@
 import React from 'react';
-import {ITask} from "../../../../models";
+import {ITask} from "../../../../types/Tasks";
 
 function Task({ taskName, isCompleted, timeCategory, timeOfCreation } : ITask) {
   return (

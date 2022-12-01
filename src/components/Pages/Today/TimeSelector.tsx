@@ -1,6 +1,7 @@
 import React from 'react';
-import TimeCard, {TTimes} from "./components/TimeCard";
+import TimeCard from "./components/TimeCard";
 import classes from './styles/TimeSelector.module.css'
+import {TTimes} from "../../../types/utilTypes";
 
 
 function TimeSelector() {
